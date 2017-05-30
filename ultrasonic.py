@@ -55,7 +55,7 @@ while True:
     # Reset GPIO settings
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(10,GPIO.OUT)
-    if distance<50:
-        GPIO.output(10,False)
+    if distance<5:
+        GPIO.output(10,False) #Turn off motor if the distance from the roof of tank is 5 cm.
     elif distance>90:
-        GPIO.output(10,True)
+        GPIO.output(10,True) #Turn on motor if the distance from the roof of tank is 90 cm.
